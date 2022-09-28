@@ -36,4 +36,5 @@ jobs:
           name: ${{ steps.package-version.outputs.current-version}}
           tag: v${{ steps.package-version.outputs.current-version}}
           commit: main
-          generateReleaseNotes: true
+          omitBody: true
+          draft: true
