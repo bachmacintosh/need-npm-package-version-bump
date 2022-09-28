@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:base", "group:allNonMajor", ":gitSignOff", ":preserveSemverRanges"],
+	"extends": ["config:base", "group:allNonMajor", ":gitSignOff"],
 	"timezone": "America/New_York",
 	"schedule": ["after 5am and before 11am"],
 	"labels": ["dependencies"],
@@ -9,9 +9,14 @@
 	"platformCommit": true,
 	"packageRules": [
 		{
+			"matchUpdateTypes": ["major"],
+			"bumpVersion": "minor"
+		},
+		{
 			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
 			"automerge": true,
-			"platformAutomerge": true
+			"platformAutomerge": true,
+			"bumpVersion": "patch"
 		}
 	]
 }
