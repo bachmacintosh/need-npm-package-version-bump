@@ -1,6 +1,6 @@
 {
 	"name": "@bachmacintosh/need-npm-pkg-version-bump",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A GitHub Action that checks for a package.json version bump, and fails if it isn't a newer Semantic Version",
 	"type": "module",
 	"main": "lib/index.js",
