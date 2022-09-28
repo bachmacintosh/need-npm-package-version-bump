@@ -9,9 +9,14 @@
 	"platformCommit": true,
 	"packageRules": [
 		{
+			"matchUpdateTypes": ["major"],
+			"bumpVersion": "minor"
+		},
+		{
 			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
 			"automerge": true,
-			"platformAutomerge": true
+			"platformAutomerge": true,
+			"bumpVersion": "patch"
 		}
 	]
 }
