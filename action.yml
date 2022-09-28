@@ -1,6 +1,9 @@
 name: "Need NPM Package Version Bump"
 description: "Checks a PR head branch against its base branch to make sure the package.json version has been properly bumped"
 author: "Collin Bachman"
+branding:
+  color: green
+  icon: check
 inputs:
   repo-token:
     description: "A GitHub issued Token to authenticate requests to the repo"
