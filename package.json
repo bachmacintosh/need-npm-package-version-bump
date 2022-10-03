@@ -1,6 +1,6 @@
 {
 	"name": "@bachmacintosh/need-npm-pkg-version-bump",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "A GitHub Action that checks for a package.json version bump, and fails if it isn't a newer Semantic Version",
 	"type": "module",
 	"main": "dist/index.js",
@@ -19,7 +19,7 @@
 		"semver": "7.3.7"
 	},
 	"devDependencies": {
-		"@octokit/webhooks-types": "6.3.6",
+		"@octokit/webhooks-types": "6.4.0",
 		"@schemastore/package": "0.0.6",
 		"@types/node": "18.7.18",
 		"@types/semver": "7.3.12",
