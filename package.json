@@ -1,12 +1,12 @@
 {
 	"name": "@bachmacintosh/need-npm-pkg-version-bump",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"description": "A GitHub Action that checks for a package.json version bump, and fails if it isn't a newer Semantic Version",
 	"type": "module",
-	"main": "dist/index.js",
+	"main": "dist/index.mjs",
 	"scripts": {
 		"prebuild": "rimraf ./lib && rimraf ./dist",
-		"build": "tsc && ncc build lib/index.js --source-map --license licenses.txt",
+		"build": "tsc && ncc build lib/index.js --license licenses.txt && mv dist/index.js dist/index.mjs",
 		"lint": "eslint . && prettier --check .",
 		"lint:fix": "eslint --fix . && prettier --write ."
 	},
