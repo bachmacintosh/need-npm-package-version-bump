@@ -1,6 +1,6 @@
 {
 	"name": "@bachmacintosh/need-npm-pkg-version-bump",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"description": "A GitHub Action that checks for a package.json version bump, and fails if it isn't a newer Semantic Version",
 	"type": "module",
 	"main": "dist/index.mjs",
@@ -26,7 +26,7 @@
 		"@typescript-eslint/eslint-plugin": "5.39.0",
 		"@typescript-eslint/parser": "5.39.0",
 		"@vercel/ncc": "0.34.0",
-		"eslint": "8.24.0",
+		"eslint": "8.25.0",
 		"eslint-config-prettier": "8.5.0",
 		"prettier": "2.7.1",
 		"rimraf": "3.0.2",
