@@ -1,6 +1,6 @@
 {
 	"name": "@bachmacintosh/need-npm-pkg-version-bump",
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"description": "A GitHub Action that checks for a package.json version bump, and fails if it isn't a newer Semantic Version",
 	"type": "module",
 	"main": "dist/index.mjs",
@@ -21,7 +21,7 @@
 	"devDependencies": {
 		"@octokit/webhooks-types": "6.7.0",
 		"@schemastore/package": "0.0.6",
-		"@types/node": "18.11.5",
+		"@types/node": "18.11.6",
 		"@types/semver": "7.3.12",
 		"@typescript-eslint/eslint-plugin": "5.41.0",
 		"@typescript-eslint/parser": "5.41.0",
