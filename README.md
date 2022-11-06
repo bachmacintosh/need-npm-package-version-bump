@@ -32,7 +32,7 @@ Make sure that the Pull Request's head ref is being checked out to properly comp
 ```yaml
 name: Tests (PR)
 on:
-  pull_request:
+  pull_request_target:
     jobs:
       run-tests:
         name: Test Pull Request
