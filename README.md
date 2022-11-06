@@ -4,7 +4,11 @@ This GitHub Action checks a Pull Request's version in its `package.json` file ag
 
 ## Usage
 
-This Action can be used in a Pull Request Trigger (either `pull_request` or `pull_request_target`). Here's a basic example:
+This Action can be used in a Pull Request Trigger (either `pull_request` or `pull_request_target`). Here's a couple basic examples:
+
+### For `pull_request` Events
+
+Add this Action as a step sometime after your `checkout` step.
 
 ```yaml
 name: Tests (PR)
@@ -21,7 +25,31 @@ on:
             uses: bachmacintosh/need-npm-package-version-bump@v1
 ```
 
-For private repos, make sure to provide a GitHub token that can read the base branch's contents.
+### For `pull_request_target` Events
+
+Make sure that the Pull Request's head ref is being checked out to properly compare old and new `package.json` versions.
+
+```yaml
+name: Tests (PR)
+on:
+  pull_request:
+    jobs:
+      run-tests:
+        name: Test Pull Request
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{github.event.pull_request.head.ref}}
+              repository: ${{github.event.pull_request.head.repo.full_name}}
+          - name: Check for Version Bump
+            uses: bachmacintosh/need-npm-package-version-bump@v1
+```
+
+### For Private Repos
+
+Make sure to provide a GitHub token that can read the base branch's contents.
 
 ```yaml
 name: Tests (PR)
