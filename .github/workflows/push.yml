@@ -27,14 +27,3 @@ jobs:
         run: npm run lint
       - name: Build Code
         run: npm run build
-      - name: Get Package Version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@main
-      - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
-        with:
-          name: ${{ steps.package-version.outputs.current-version}}
-          tag: v${{ steps.package-version.outputs.current-version}}
-          commit: main
-          omitBody: true
-          draft: true
