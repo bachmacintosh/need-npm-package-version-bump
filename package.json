@@ -16,7 +16,7 @@
 		"@actions/core": "1.10.0",
 		"@actions/github": "5.1.1",
 		"node-fetch": "3.3.2",
-		"semver": "7.5.3"
+		"semver": "7.5.4"
 	},
 	"devDependencies": {
 		"@octokit/webhooks-types": "7.1.0",
