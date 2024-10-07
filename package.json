@@ -31,7 +31,7 @@
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-import": "2.31.0",
     "prettier": "3.3.3",
-    "rimraf": "5.0.10",
+    "rimraf": "6.0.1",
     "typescript": "5.3.3"
   }
 }
